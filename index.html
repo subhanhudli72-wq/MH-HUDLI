@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MH Hudli Jewellery — Pure and elegant jewellery at factory price.">
+<title>MH Hudli Jewellery | Elegance Meets Tradition</title>
+
+<style>
+:root{
+  --gold:#b88a44;
+  --gold-light:#d9b56b;
+  --cream:#fbf7ef;
+  --dark:#211b16;
+  --muted:#756b61;
+  --white:#fff;
+  --line:#eadfce;
+  --green:#25d366;
+  --shadow:0 18px 50px rgba(49,34,19,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:var(--cream);
+  color:var(--dark);
+  line-height:1.6
+}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+
+.topbar{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:8px 15px;
+  font:12px Arial,sans-serif;
+  letter-spacing:.5px
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line)
+}
+.nav{
+  max-width:1200px;
+  height:78px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px
+}
+.brand{
+  font-size:24px;
+  font-weight:bold;
+  letter-spacing:1px
+}
+.brand small{
+  display:block;
+  color:var(--gold);
+  font:10px Arial,sans-serif;
+  letter-spacing:3px
+}
+.links{
+  display:flex;
+  gap:28px;
+  font:14px Arial,sans-serif
+}
+.links a:hover{color:var(--gold)}
+.nav-actions{display:flex;gap:8px}
+.circle{
+  border:1px solid var(--line);
+  background:#fff;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  position:relative
+}
+.cart-count{
+  position:absolute;
+  top:-4px;
+  right:-3px;
+  background:var(--dark);
+  color:#fff;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  font:10px Arial,sans-serif;
+  display:grid;
+  place-items:center
+}
+
+.hero{
+  min-height:650px;
+  background:
+    linear-gradient(100deg,rgba(33,27,22,.88),rgba(33,27,22,.35)),
+    url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  display:flex;
+  align-items:center
+}
+.hero-inner{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  padding:80px 20px;
+  color:#fff
+}
+.kicker,.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:4px;
+  color:#d9b56b;
+  font:12px Arial,sans-serif
+}
+.hero h1{
+  font-size:clamp(48px,7vw,88px);
+  line-height:1.02;
+  max-width:800px;
+  margin:15px 0
+}
+.hero h1 span{color:#e5c47d}
+.hero p{
+  max-width:570px;
+  font-size:18px;
+  color:#f4eee5;
+  margin-bottom:28px
+}
+.hero-buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap
+}
+.btn{
+  border:0;
+  padding:13px 21px;
+  border-radius:4px;
+  font:bold 13px Arial,sans-serif;
+  letter-spacing:.5px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px
+}
+.btn-gold{
+  background:var(--gold);
+  color:#fff
+}
+.btn-gold:hover{background:#9e7336}
+.btn-light{
+  background:#fff;
+  color:var(--dark)
+}
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:75px 20px
+}
+.heading{
+  text-align:center;
+  margin-bottom:38px
+}
+.heading h2{
+  font-size:42px;
+  margin:6px 0
+}
+.heading p{
+  color:var(--muted);
+  font:15px Arial,sans-serif
+}
+
+.features{
+  max-width:1160px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)
+}
+.feature{
+  padding:27px 18px;
+  text-align:center;
+  border-right:1px solid var(--line)
+}
+.feature:last-child{border-right:0}
+.feature b{
+  display:block;
+  font-size:15px
+}
+.feature span{
+  font:12px Arial,sans-serif;
+  color:var(--muted)
+}
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px
+}
+.category{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:10px;
+  transition:.25s;
+  cursor:pointer
+}
+.category:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow)
+}
+.category img{
+  width:100%;
+  height:190px;
+  object-fit:cover
+}
+.category h3{
+  text-align:center;
+  padding:12px 5px 7px;
+  font-size:17px
+}
+.category p{
+  text-align:center;
+  color:var(--muted);
+  font:11px Arial,sans-serif;
+  padding-bottom:10px
+}
+
+.tools{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:25px
+}
+.search{
+  flex:1;
+  min-width:220px;
+  border:1px solid var(--line);
+  background:#fff;
+  padding:13px;
+  border-radius:4px;
+  outline:none
+}
+select{
+  border:1px solid var(--line);
+  background:#fff;
+  padding:0 14px;
+  border-radius:4px;
+  min-width:160px
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px
+}
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:.25s
+}
+.card:hover{
+  box-shadow:var(--shadow);
+  transform:translateY(-4px)
+}
+.pic{
+  position:relative;
+  background:#f4eee4
+}
+.pic img{
+  width:100%;
+  height:270px;
+  display:block;
+  object-fit:cover
+}
+.sale{
+  position:absolute;
+  left:10px;
+  top:10px;
+  background:var(--dark);
+  color:#fff;
+  padding:5px 8px;
+  font:10px Arial,sans-serif
+}
+.heart{
+  position:absolute;
+  right:10px;
+  top:10px;
+  border:0;
+  background:#fff;
+  width:35px;
+  height:35px;
+  border-radius:50%
+}
+.info{padding:16px}
+.cat{
+  font:10px Arial,sans-serif;
+  text-transform:uppercase;
+  color:var(--gold);
+  letter-spacing:1px
+}
+.info h3{
+  font-size:16px;
+  margin:5px 0
+}
+.stars{
+  color:#c4934a;
+  font:12px Arial,sans-serif
+}
+.price{
+  font:bold 19px Arial,sans-serif;
+  margin-top:8px
+}
+.old{
+  text-decoration:line-through;
+  color:#aaa;
+  font-size:12px;
+  margin-left:5px;
+  font-weight:normal
+}
+.add{
+  width:100%;
+  margin-top:12px
+}
+
+.banner{
+  margin:20px auto 75px;
+  max-width:1160px;
+  background:
+    linear-gradient(100deg,rgba(33,27,22,.92),rgba(33,27,22,.45)),
+    url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+  padding:70px 30px;
+  color:#fff;
+  text-align:center
+}
+.banner h2{
+  font-size:43px;
+  margin:8px 0
+}
+.banner p{
+  font:14px Arial,sans-serif;
+  margin-bottom:22px;
+  color:#eee
+}
+
+.owner{
+  background:#fff;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)
+}
+.owner-grid{
+  max-width:1000px;
+  margin:auto;
+  padding:75px 20px;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:60px;
+  align-items:center
+}
+.owner-photo{
+  width:100%;
+  max-width:350px;
+  margin:auto
+}
+.owner-photo img{
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:3px;
+  box-shadow:var(--shadow)
+}
+.owner h2{
+  font-size:45px;
+  margin:5px 0
+}
+.owner-title{
+  color:var(--gold);
+  font:bold 13px Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:18px
+}
+.owner p{
+  color:var(--muted);
+  font:15px Arial,sans-serif;
+  margin-bottom:15px
+}
+.quote{
+  border-left:3px solid var(--gold);
+  padding-left:15px;
+  font-style:italic
+}
+
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+.review{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:25px
+}
+.review p{
+  font:14px Arial,sans-serif;
+  color:var(--muted);
+  margin:10px 0 15px
+}
+.review b{
+  font:13px Arial,sans-serif
+}
+
+.newsletter{
+  background:#efe4d2;
+  padding:55px 20px;
+  text-align:center
+}
+.newsletter h2{font-size:35px}
+.newsletter p{
+  font:13px Arial,sans-serif;
+  color:var(--muted);
+  margin:8px 0 20px
+}
+.subscribe{
+  display:flex;
+  max-width:550px;
+  margin:auto
+}
+.subscribe input{
+  flex:1;
+  border:1px solid var(--line);
+  padding:14px;
+  outline:0
+}
+.subscribe button{
+  border:0;
+  background:var(--dark);
+  color:#fff;
+  padding:0 20px;
+  font:bold 12px Arial,sans-serif
+}
+
+footer{
+  background:var(--dark);
+  color:#fff;
+  padding:55px 20px 20px
+}
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:35px
+}
+footer h3{margin-bottom:14px}
+footer p,footer a{
+  font:13px Arial,sans-serif;
+  color:#c5bbb0
+}
+footer a{
+  display:block;
+  margin:8px 0
+}
+footer a:hover{color:#fff}
+.bottom{
+  max-width:1200px;
+  margin:35px auto 0;
+  padding-top:18px;
+  border-top:1px solid #4b4138;
+  text-align:center;
+  color:#aaa;
+  font:11px Arial,sans-serif
+}
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#25d366;
+  color:#fff;
+  font-size:28px;
+  z-index:1500;
+  box-shadow:0 8px 25px rgba(0,0,0,.2)
+}
+
+.modal-bg{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  z-index:2000;
+  padding:20px;
+  align-items:center;
+  justify-content:center
+}
+.modal-bg.show{display:flex}
+.modal{
+  background:#fff;
+  max-width:850px;
+  width:100%;
+  max-height:90vh;
+  overflow:auto;
+  position:relative
+}
+.close{
+  position:absolute;
+  right:12px;
+  top:12px;
+  border:0;
+  background:#fff;
+  border-radius:50%;
+  width:36px;
+  height:36px;
+  font-size:20px;
+  z-index:3
+}
+.detail{
+  display:grid;
+  grid-template-columns:1fr 1fr
+}
+.detail img{
+  width:100%;
+  height:480px;
+  object-fit:cover
+}
+.detail-content{padding:40px}
+.detail-content h2{
+  font-size:34px;
+  margin:5px 0
+}
+.detail-content p{
+  font:14px Arial,sans-serif;
+  color:var(--muted);
+  margin:15px 0
+}
+.detail-price{
+  font:bold 28px Arial,sans-serif;
+  margin:15px 0
+}
+
+.cart-modal{
+  max-width:600px;
+  padding:30px
+}
+.cart-row{
+  display:flex;
+  gap:12px;
+  padding:13px 0;
+  border-bottom:1px solid var(--line)
+}
+.cart-row img{
+  width:65px;
+  height:65px;
+  object-fit:cover
+}
+.cart-info{
+  flex:1;
+  font:13px Arial,sans-serif
+}
+.qty button{
+  border:1px solid var(--line);
+  background:#fff;
+  width:27px;
+  height:27px
+}
+.summary{
+  background:#f8f3eb;
+  padding:18px;
+  margin-top:20px;
+  font:13px Arial,sans-serif
+}
+.summary div{
+  display:flex;
+  justify-content:space-between;
+  margin:7px 0
+}
+.summary .total{
+  border-top:1px solid var(--line);
+  padding-top:12px;
+  font-size:18px;
+  font-weight:bold
+}
+
+.form-modal{
+  max-width:700px;
+  padding:30px
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px
+}
+.form-group.full{grid-column:1/-1}
+.form-group label{
+  display:block;
+  font:bold 12px Arial,sans-serif;
+  margin-bottom:5px
+}
+.form-group input,
+.form-group textarea{
+  width:100%;
+  border:1px solid var(--line);
+  padding:12px;
+  outline:0
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color:var(--gold)
+}
+
+.mobile-nav{display:none}
+
+@media(max-width:950px){
+  .products{grid-template-columns:repeat(3,1fr)}
+  .categories{grid-template-columns:repeat(3,1fr)}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .links{display:none}
+}
+@media(max-width:700px){
+  body{padding-bottom:62px}
+  .nav{height:65px}
+  .brand{font-size:19px}
+  .hero{min-height:590px}
+  .hero h1{font-size:50px}
+  .section{padding:55px 15px}
+  .heading h2{font-size:34px}
+  .categories{grid-template-columns:repeat(2,1fr)}
+  .products{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px
+  }
+  .pic img{height:190px}
+  .owner-grid{
+    grid-template-columns:1fr;
+    gap:30px
+  }
+  .owner h2{font-size:38px}
+  .reviews{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .detail{grid-template-columns:1fr}
+  .detail img{height:300px}
+  .detail-content{padding:25px}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:auto}
+  .subscribe{display:block}
+  .subscribe input,
+  .subscribe button{
+    width:100%;
+    height:48px
+  }
+  .subscribe button{margin-top:7px}
+
+  .mobile-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:62px;
+    background:#fff;
+    border-top:1px solid var(--line);
+    z-index:1400;
+    display:flex;
+    justify-content:space-around;
+    align-items:center
+  }
+  .mobile-nav a,
+  .mobile-nav button{
+    border:0;
+    background:none;
+    font:10px Arial,sans-serif;
+    color:var(--muted);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:3px
+  }
+  .mobile-nav span{font-size:20px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  ✨ PURE & ELEGANT JEWELLERY AT FACTORY PRICE • PAN-INDIA ORDERS WELCOME ✨
+</div>
+
+<header>
+<nav class="nav">
+  <a href="#home" class="brand">
+    MH HUDLI JEWELLERY
+    <small>Elegance Meets Tradition</small>
+  </a>
+
+  <div class="links">
+    <a href="#home">Home</a>
+    <a href="#collections">Collections</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="nav-actions">
+    <button class="circle" onclick="openCart()" aria-label="Cart">
+      🛍️
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="kicker">MH Hudli Jewellery</div>
+
+    <h1>
+      Jewellery that tells
+      <span>your story.</span>
+    </h1>
+
+    <p>
+      Discover elegant jewellery designed to make everyday moments
+      feel extraordinary — with beautiful styles at factory prices.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn btn-gold" href="#shop">SHOP COLLECTION</a>
+      <a class="btn btn-light" href="#about">MEET THE OWNER</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:45px">
+  <div class="features">
+
+    <div class="feature">
+      <b>✦ Quality Jewellery</b>
+      <span>Carefully selected designs</span>
+    </div>
+
+    <div class="feature">
+      <b>♢ Elegant Designs</b>
+      <span>Classic & modern styles</span>
+    </div>
+
+    <div class="feature">
+      <b>₹ Factory Prices</b>
+      <span>Beautiful value for money</span>
+    </div>
+
+    <div class="feature">
+      <b>♡ Personal Service</b>
+      <span>Customer-first support</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="collections">
+
+  <div class="heading">
+    <div class="eyebrow">Explore</div>
+    <h2>Our Collections</h2>
+    <p>Find a piece that feels uniquely yours.</p>
+  </div>
+
+  <div class="categories">
+
+    <div class="category" onclick="filterCategory('Rings')">
+      <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=85">
+      <h3>Rings</h3>
+      <p>Timeless elegance</p>
+    </div>
+
+    <div class="category" onclick="filterCategory('Necklaces')">
+      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=85">
+      <h3>Necklaces</h3>
+      <p>Statement beauty</p>
+    </div>
+
+    <div class="category" onclick="filterCategory('Earrings')">
+      <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=85">
+      <h3>Earrings</h3>
+      <p>Everyday sparkle</p>
+    </div>
+
+    <div class="category" onclick="filterCategory('Bracelets')">
+      <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=85">
+      <h3>Bracelets</h3>
+      <p>Elegant details</p>
+    </div>
+
+    <div class="category" onclick="filterCategory('Pendants')">
+      <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=700&q=85">
+      <h3>Pendants</h3>
+      <p>Graceful charm</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="shop">
+
+  <div class="heading">
+    <div class="eyebrow">Shop</div>
+    <h2>Featured Jewellery</h2>
+    <p>Elegant pieces selected for MH Hudli Jewellery.</p>
+  </div>
+
+  <div class="tools">
+    <input
+      class="search"
+      id="search"
+      placeholder="Search jewellery..."
+      oninput="renderProducts()"
+    >
+
+    <select id="category" onchange="renderProducts()">
+      <option value="All">All Collections</option>
+      <option value="Rings">Rings</option>
+      <option value="Necklaces">Necklaces</option>
+      <option value="Earrings">Earrings</option>
+      <option value="Bracelets">Bracelets</option>
+      <option value="Pendants">Pendants</option>
+    </select>
+
+    <select id="sort" onchange="renderProducts()">
+      <option value="featured">Featured</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+    </select>
+  </div>
+
+  <div class="products" id="products"></div>
+
+</section>
+
+<section class="banner">
+
+  <div class="eyebrow">Special Collection</div>
+
+  <h2>Because You Deserve the Best.</h2>
+
+  <p>
+    Beautiful jewellery for celebrations, gifting and everyday elegance.
+  </p>
+
+  <a class="btn btn-gold" href="#shop">
+    EXPLORE COLLECTION
+  </a>
+
+</section>
+
+<section class="owner" id="about">
+
+  <div class="owner-grid">
+
+    <div class="owner-photo">
+
+      <!-- OWNER PHOTO URL -->
+      <img
+        src="https://i.ibb.co/BVYH6ksD/file-000000008e8c81fa8d321449b2ac507a.png"
+        alt="Inam Hudli - Owner"
+      >
+
+    </div>
+
+    <div>
+
+      <div class="eyebrow">Meet the Owner</div>
+
+      <h2>Inam Hudli</h2>
+
+      <div class="owner-title">
+        Founder & Owner — MH Hudli Jewellery
+      </div>
+
+      <p>
+        Welcome to MH Hudli Jewellery. Our aim is to bring elegant,
+        beautiful jewellery to customers at fair and accessible prices.
+      </p>
+
+      <p>
+        We believe jewellery should feel personal — whether you are
+        celebrating a special occasion, choosing a gift, or simply
+        adding something beautiful to your everyday style.
+      </p>
+
+      <p class="quote">
+        “Our promise is simple: elegant jewellery, honest value and
+        a customer experience you can trust.”
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="heading">
+    <div class="eyebrow">Customer Love</div>
+    <h2>What Our Customers Say</h2>
+  </div>
+
+  <div class="reviews">
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>
+        Beautiful designs and very good pricing. The jewellery looks
+        even better in person.
+      </p>
+      <b>— Happy Customer</b>
+    </div>
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>
+        Excellent collection and helpful service. I found exactly
+        what I was looking for.
+      </p>
+      <b>— Valued Customer</b>
+    </div>
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>
+        Elegant jewellery with a premium feel. Highly recommended
+        for gifting.
+      </p>
+      <b>— Returning Customer</b>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="newsletter">
+
+  <h2>Stay in the Loop</h2>
+
+  <p>
+    Get updates about new collections and special offers.
+  </p>
+
+  <form
+    class="subscribe"
+    action="https://formspree.io/f/xyeynbkk"
+    method="POST"
+  >
+
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="Enter your email address"
+    >
+
+    <input
+      type="hidden"
+      name="_subject"
+      value="MH Hudli Jewellery Newsletter Signup"
+    >
+
+    <button type="submit">
+      SUBSCRIBE
+    </button>
+
+  </form>
+
+</section>
+
+<footer id="contact">
+
+  <div class="footer-grid">
+
+    <div>
+      <h3>MH HUDLI JEWELLERY</h3>
+
+      <p>
+        Pure and elegant jewellery at factory price.
+        Where elegance meets tradition.
+      </p>
+    </div>
+
+    <div>
+      <h3>Shop</h3>
+
+      <a href="#shop">All Jewellery</a>
+      <a href="#collections">Collections</a>
+      <a href="#shop" onclick="filterCategory('Rings')">Rings</a>
+      <a href="#shop" onclick="filterCategory('Necklaces')">Necklaces</a>
+    </div>
+
+    <div>
+      <h3>Customer Care</h3>
+
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+
+      <a
+        href="https://wa.me/919309031070"
+        target="_blank"
+      >
+        WhatsApp
+      </a>
+
+      <a href="tel:+919309031070">
+        +91 93090 31070
+      </a>
+    </div>
+
+    <div>
+      <h3>Owner</h3>
+
+      <p>Inam Hudli</p>
+      <p>Founder & Owner</p>
+      <p>MH Hudli Jewellery</p>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    © 2026 MH Hudli Jewellery. All rights reserved.
+  </div>
+
+</footer>
+
+<a
+  class="whatsapp"
+  href="https://wa.me/919309031070"
+  target="_blank"
+  aria-label="WhatsApp"
+>
+  ☏
+</a>
+
+<div class="mobile-nav">
+
+  <a href="#home">
+    <span>⌂</span>
+    Home
+  </a>
+
+  <a href="#collections">
+    <span>◇</span>
+    Collections
+  </a>
+
+  <a href="#shop">
+    <span>♢</span>
+    Shop
+  </a>
+
+  <button onclick="openCart()">
+    <span>🛍️</span>
+    Cart
+  </button>
+
+  <a href="#about">
+    <span>♡</span>
+    About
+  </a>
+
+</div>
+
+<div class="modal-bg" id="productModal">
+
+  <div class="modal">
+
+    <button
+      class="close"
+      onclick="closeModal('productModal')"
+    >
+      ×
+    </button>
+
+    <div class="detail">
+
+      <img id="detailImg" src="" alt="">
+
+      <div class="detail-content">
+
+        <div class="eyebrow" id="detailCat"></div>
+
+        <h2 id="detailName"></h2>
+
+        <div class="stars">★★★★★</div>
+
+        <div class="detail-price" id="detailPrice"></div>
+
+        <p id="detailDesc"></p>
+
+        <button
+          class="btn btn-gold"
+          style="width:100%"
+          id="detailAdd"
+        >
+          ADD TO BAG
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="modal-bg" id="cartModal">
+
+  <div class="modal cart-modal">
+
+    <button
+      class="close"
+      onclick="closeModal('cartModal')"
+    >
+      ×
+    </button>
+
+    <h2>Your Bag</h2>
+
+    <div id="cartItems"></div>
+
+    <div id="summary"></div>
+
+  </div>
+
+</div>
+
+<div class="modal-bg" id="checkoutModal">
+
+  <div class="modal form-modal">
+
+    <button
+      class="close"
+      onclick="closeModal('checkoutModal')"
+    >
+      ×
+    </button>
+
+    <h2>Complete Your Order</h2>
+
+    <br>
+
+    <form
+      action="https://formspree.io/f/xyeynbkk"
+      method="POST"
+      id="orderForm"
+    >
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone *</label>
+          <input name="phone" type="tel" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input name="email" type="email">
+        </div>
+
+        <div class="form-group">
+          <label>Pincode</label>
+          <input name="pincode">
+        </div>
+
+        <div class="form-group full">
+          <label>Delivery Address *</label>
+          <textarea
+            name="address"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group full">
+          <label>Order Notes</label>
+          <textarea
+            name="notes"
+            rows="2"
+          ></textarea>
+        </div>
+
+      </div>
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Order - MH Hudli Jewellery"
+      >
+
+      <input
+        type="hidden"
+        name="order_details"
+        id="orderDetails"
+      >
+
+      <input
+        type="hidden"
+        name="order_total"
+        id="orderTotal"
+      >
+
+      <button
+        class="btn btn-gold"
+        type="submit"
+        style="width:100%;margin-top:10px"
+      >
+        PLACE ORDER
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script>
+
+const products = [
+
+{
+  id:1,
+  name:"Classic Solitaire Ring",
+  category:"Rings",
+  price:1499,
+  old:2499,
+  img:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85",
+  desc:"A timeless solitaire-inspired ring for everyday elegance.",
+  sale:"-40%"
+},
+
+{
+  id:2,
+  name:"Elegant Gold-Tone Ring",
+  category:"Rings",
+  price:1999,
+  old:2999,
+  img:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85",
+  desc:"A refined statement ring with a classic luxury look.",
+  sale:"-33%"
+},
+
+{
+  id:3,
+  name:"Pearl Drop Necklace",
+  category:"Necklaces",
+  price:2499,
+  old:3999,
+  img:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85",
+  desc:"Elegant necklace featuring a delicate pearl-inspired drop.",
+  sale:"-38%"
+},
+
+{
+  id:4,
+  name:"Rose Gold Pendant Set",
+  category:"Pendants",
+  price:2599,
+  old:4499,
+  img:"https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=900&q=85",
+  desc:"A graceful pendant design made for celebrations and gifting.",
+  sale:"-42%"
+},
+
+{
+  id:5,
+  name:"Classic Pearl Earrings",
+  category:"Earrings",
+  price:1099,
+  old:1999,
+  img:"https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=85",
+  desc:"Elegant pearl-style earrings for everyday and occasion wear.",
+  sale:"-45%"
+},
+
+{
+  id:6,
+  name:"Crystal Drop Earrings",
+  category:"Earrings",
+  price:899,
+  old:1599,
+  img:"https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=900&q=85",
+  desc:"Sparkling drop earrings with a graceful silhouette.",
+  sale:"-44%"
+},
+
+{
+  id:7,
+  name:"Elegant Link Bracelet",
+  category:"Bracelets",
+  price:1799,
+  old:2999,
+  img:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=85",
+  desc:"A sophisticated bracelet that pairs beautifully with any look.",
+  sale:"-40%"
+},
+
+{
+  id:8,
+  name:"Heart Charm Bracelet",
+  category:"Bracelets",
+  price:1499,
+  old:2499,
+  img:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85",
+  desc:"A delicate heart-inspired bracelet, perfect for gifting.",
+  sale:"-40%"
+},
+
+{
+  id:9,
+  name:"Minimalist Chain Necklace",
+  category:"Necklaces",
+  price:1699,
+  old:2699,
+  img:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=900&q=85",
+  desc:"Minimal, versatile and easy to style every day.",
+  sale:"-37%"
+},
+
+{
+  id:10,
+  name:"Royal Floral Pendant",
+  category:"Pendants",
+  price:2299,
+  old:3599,
+  img:"https://images.unsplash.com/photo-1603561596112-db5a6d4f8a9d?auto=format&fit=crop&w=900&q=85",
+  desc:"A floral-inspired pendant with a premium statement finish.",
+  sale:"-36%"
+}
+
+];
+
+let cart =
+JSON.parse(
+  localStorage.getItem("mhHudliCart") || "[]"
+);
+
+function save(){
+
+  localStorage.setItem(
+    "mhHudliCart",
+    JSON.stringify(cart)
+  );
+
+  updateCount();
+
+}
+
+function updateCount(){
+
+  document.getElementById("cartCount").textContent =
+    cart.reduce(
+      (total,item)=>total + item.qty,
+      0
+    );
+
+}
+
+function filterCategory(category){
+
+  document.getElementById("category").value = category;
+
+  renderProducts();
+
+  document
+    .getElementById("shop")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+function renderProducts(){
+
+  const search =
+    document
+      .getElementById("search")
+      .value
+      .toLowerCase();
+
+  const category =
+    document.getElementById("category").value;
+
+  const sort =
+    document.getElementById("sort").value;
+
+  let list =
+    products.filter(product =>
+
+      (category === "All" ||
+       product.category === category)
+
+      &&
+
+      (
+        product.name.toLowerCase().includes(search) ||
+        product.category.toLowerCase().includes(search)
+      )
+
+    );
+
+  if(sort === "low"){
+    list.sort((a,b)=>a.price-b.price);
+  }
+
+  if(sort === "high"){
+    list.sort((a,b)=>b.price-a.price);
+  }
+
+  document.getElementById("products").innerHTML =
+
+    list.map(product => `
+
+      <article class="card">
+
+        <div class="pic">
+
+          <img
+            src="${product.img}"
+            alt="${product.name}"
+            loading="lazy"
+          >
+
+          <span class="sale">
+            ${product.sale}
+          </span>
+
+          <button
+            class="heart"
+            onclick="this.textContent =
+            this.textContent === '♡' ? '♥' : '♡'"
+          >
+            ♡
+          </button>
+
+        </div>
+
+        <div class="info">
+
+          <div class="cat">
+            ${product.category}
+          </div>
+
+          <h3>
+            ${product.name}
+          </h3>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <div class="price">
+            ₹${product.price.toLocaleString("en-IN")}
+
+            <span class="old">
+              ₹${product.old.toLocaleString("en-IN")}
+            </span>
+          </div>
+
+          <button
+            class="btn"
+            style="width:100%;margin-top:10px;border:1px solid #eadfce;background:#fff"
+            onclick="view(${product.id})"
+          >
+            VIEW DETAILS
+          </button>
+
+          <button
+            class="btn btn-gold add"
+            onclick="add(${product.id})"
+          >
+            ADD TO BAG
+          </button>
+
+        </div>
+
+      </article>
+
+    `).join("")
+
+    || "<p>No jewellery found.</p>";
+
+}
+
+function add(id){
+
+  const item =
+    cart.find(product => product.id === id);
+
+  if(item){
+
+    item.qty++;
+
+  }else{
+
+    cart.push({
+      id:id,
+      qty:1
+    });
+
+  }
+
+  save();
+
+  alert("Added to your bag.");
+
+}
+
+function view(id){
+
+  const product =
+    products.find(item => item.id === id);
+
+  document.getElementById("detailImg").src =
+    product.img;
+
+  document.getElementById("detailName").textContent =
+    product.name;
+
+  document.getElementById("detailCat").textContent =
+    product.category;
+
+  document.getElementById("detailPrice").textContent =
+    "₹" + product.price.toLocaleString("en-IN");
+
+  document.getElementById("detailDesc").textContent =
+    product.desc;
+
+  document.getElementById("detailAdd").onclick =
+    function(){
+
+      add(product.id);
+
+      closeModal("productModal");
+
+    };
+
+  document
+    .getElementById("productModal")
+    .classList.add("show");
+
+}
+
+function closeModal(id){
+
+  document
+    .getElementById(id)
+    .classList.remove("show");
+
+}
+
+function openCart(){
+
+  renderCart();
+
+  document
+    .getElementById("cartModal")
+    .classList.add("show");
+
+}
+
+function renderCart(){
+
+  const box =
+    document.getElementById("cartItems");
+
+  if(!cart.length){
+
+    box.innerHTML =
+      "<p style='padding:30px 0;color:#756b61'>Your bag is empty.</p>";
+
+    document.getElementById("summary").innerHTML = "";
+
+    return;
+
+  }
+
+  let subtotal = 0;
+
+  box.innerHTML = cart.map(item => {
+
+    const product =
+      products.find(p => p.id === item.id);
+
+    subtotal +=
+      product.price * item.qty;
+
+    return `
+
+      <div class="cart-row">
+
+        <img
+          src="${product.img}"
+          alt="${product.name}"
+        >
+
+        <div class="cart-info">
+
+          <b>${product.name}</b>
+
+          <br>
+
+          ₹${product.price.toLocaleString("en-IN")}
+
+          <div class="qty">
+
+            <button
+              onclick="change(${product.id},-1)"
+            >
+              −
+            </button>
+
+            ${item.qty}
+
+            <button
+              onclick="change(${product.id},1)"
+            >
+              +
+            </button>
+
+            <button
+              onclick="removeItem(${product.id})"
+              style="border:0;background:none;color:#a33;margin-left:7px"
+            >
+              Remove
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    `;
+
+  }).join("");
+
+  document.getElementById("summary").innerHTML = `
+
+    <div class="summary">
+
+      <div>
+        <span>Subtotal</span>
+        <b>₹${subtotal.toLocaleString("en-IN")}</b>
+      </div>
+
+      <div>
+        <span>Shipping</span>
+        <b>FREE</b>
+      </div>
+
+      <div class="total">
+        <span>Total</span>
+        <b>₹${subtotal.toLocaleString("en-IN")}</b>
+      </div>
+
+      <button
+        class="btn btn-gold"
+        style="width:100%;margin-top:12px"
+        onclick="checkout()"
+      >
+        CHECKOUT
+      </button>
+
+    </div>
+
+  `;
+
+}
+
+function change(id,number){
+
+  const item =
+    cart.find(product => product.id === id);
+
+  if(item){
+
+    item.qty += number;
+
+    if(item.qty < 1){
+
+      cart =
+        cart.filter(
+          product => product.id !== id
+        );
+
+    }
+
+  }
+
+  save();
+
+  renderCart();
+
+}
+
+function removeItem(id){
+
+  cart =
+    cart.filter(
+      item => item.id !== id
+    );
+
+  save();
+
+  renderCart();
+
+}
+
+function checkout(){
+
+  if(!cart.length){
+
+    return;
+
+  }
+
+  const details =
+    cart.map(item => {
+
+      const product =
+        products.find(p => p.id === item.id);
+
+      return `
+${product.name} x ${item.qty}
+= ₹${(
+  product.price * item.qty
+).toLocaleString("en-IN")}
+`;
+
+    }).join("\n");
+
+  const total =
+    cart.reduce(
+      (sum,item) =>
+        sum +
+        products.find(
+          p => p.id === item.id
+        ).price * item.qty,
+      0
+    );
+
+  document.getElementById("orderDetails").value =
+    details;
+
+  document.getElementById("orderTotal").value =
+    "₹" + total.toLocaleString("en-IN");
+
+  closeModal("cartModal");
+
+  document
+    .getElementById("checkoutModal")
+    .classList.add("show");
+
+}
+
+document
+  .getElementById("orderForm")
+  .addEventListener(
+    "submit",
+    function(){
+
+      setTimeout(
+        function(){
+
+          cart = [];
+
+          save();
+
+        },
+        500
+      );
+
+    }
+  );
+
+document
+  .querySelectorAll(".modal-bg")
+  .forEach(modal => {
+
+    modal.addEventListener(
+      "click",
+      function(event){
+
+        if(event.target === modal){
+
+          modal.classList.remove("show");
+
+        }
+
+      }
+    );
+
+  });
+
+renderProducts();
+updateCount();
+
+</script>
+
+</body>
+</html>
+```0
